@@ -32,6 +32,7 @@ module Qti
     end
 
     def self.manifest_path(path)
+      puts "Path: #{path}" # This will print the path to the console
       Find.find(path) do |subdir|
         return subdir if subdir =~ /imsmanifest.xml\z/
       end
